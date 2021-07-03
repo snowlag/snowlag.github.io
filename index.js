@@ -33,7 +33,7 @@ function ResizeImage() {
         let height = parseInt(document.getElementById("height").value)
         let width = parseInt(document.getElementById("width").value)
             //resize parameters
-        let ImageOutputSize = new cv.Size(height, width);
+        let ImageOutputSize = new cv.Size(width, height);
         //resize image
         cv.resize(SourceImage, OutputImage, ImageOutputSize, 0, 0, cv.INTER_AREA);
         cv.imshow('canvasOutput', OutputImage);
