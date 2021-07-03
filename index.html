@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Image Resize tool</title>
+    <link href="index.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <h2>IMAGE RESIZE TOOL</h2>
+    </div>
+
+    <p id="status">OpenCV.js is loading...</p>
+
+    <div class="row">
+        <div class="column">
+            <div class="output">
+                <div class="caption">Input Image</div>
+                <img id="imageSrc" />
+                <div class="caption">
+                    <input type="file" id="fileInput" name="file" accept="image/x-png,image/gif,image/jpeg" hidden />
+                    <input id='buttonid' type='button' value='Upload Image' />
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <label for="height">Height</label>
+            <input step="10" type="number" name="height" id="height" value=200>
+            <br>
+            <label for="width">Width</label>
+            <input step="10" type="number" name="width" id="width" value=200>
+            <br><br>
+            <button onclick="ResizeImage()" id="resizeButton">RESIZE</button>
+        </div>
+    </div>
+
+    <div id="outputContainer">
+        <div class="output">
+            <div class="caption">Output Image</div>
+            <canvas id="canvasOutput"></canvas>
+            <br>
+            <a style="display: none;" type="button" href="" download="download" id="downloadButton">Download</a>
+        </div>
+
+    </div>
+
+    <script src="index.js" type="text/javascript"></script>
+    <script async src="opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
+</body>
+
+</html>
