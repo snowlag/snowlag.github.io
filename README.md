@@ -1,7 +1,5 @@
-# snowlag.github.io
-Image resize tool
-
-## Link
+# Image resize tool
+## Webpage Link
 https://snowlag.github.io/
 
 ## DEMO
