@@ -44,7 +44,7 @@ function ResizeImage() {
         //unhide download button
         DownloadElement.style.display = "block"
             //give coverted image name
-        DownloadElement.setAttribute("download", "covertedImage-" + height + "-" + width);
+        DownloadElement.setAttribute("download", "covertedImage-" + width + "-" + height);
         //set the downloading link
         DownloadElement.setAttribute("href", GeneratedUrl)
             //delete as the input and output image as resizing is done
